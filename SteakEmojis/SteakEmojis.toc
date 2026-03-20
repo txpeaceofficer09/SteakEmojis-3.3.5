@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: Steak Emojis
+## Notes: Gives a button above the chat frame to access all the SF emojis.
+## Author: Soonbesteak
+## Version: 1.0
+Core.lua
