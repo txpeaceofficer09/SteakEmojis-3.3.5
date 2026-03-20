@@ -160,6 +160,15 @@ for i, data in ipairs(emojis) do
 				eb:Insert(self.code)
 				panel:Hide()
 			end)
+			
+			self:SetScript("OnEnter", function(self)
+				GameTooltip:SetOwner(self)
+				GameTooltip:ClearLines()
+				GameTooltip:AddLine(self.code)
+				GameTooltip:Show()
+			end)
+			
+			self:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
 		else
 			eb:Insert(self.code)
 			panel:Hide()		
@@ -173,7 +182,7 @@ local function OnEvent(self, event, ...)
 	if IsAddOnLoaded("SteakChat") then
 		self:SetPoint("BOTTOM", HelpMicroButton, "TOP", 0, -14)
 	else
-		self:SetPoint("TOP", ChatFrame1ButtonFrame, "TOP", 0, 4)
+		self:SetPoint("TOP", ChatFrame1ButtonFrame, "TOP", 0, -2)
 	end
 end
 
