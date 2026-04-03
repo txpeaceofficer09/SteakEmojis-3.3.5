@@ -181,6 +181,8 @@ local function OnEvent(self, event, ...)
 
 	if IsAddOnLoaded("SteakChat") then
 		self:SetPoint("BOTTOM", HelpMicroButton, "TOP", 0, -14)
+	elseif IsAddOnLoaded("ElvUI") then
+		self:SetPoint("BOTTOMLEFT", ChatFrame1Tab, "TOPLEFT", 0, 5)
 	else
 		self:SetPoint("TOP", ChatFrame1ButtonFrame, "TOP", 0, -2)
 	end
