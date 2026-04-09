@@ -180,7 +180,12 @@ local function OnEvent(self, event, ...)
 	self:ClearAllPoints()
 
 	if IsAddOnLoaded("SteakChat") then
-		self:SetPoint("BOTTOM", HelpMicroButton, "TOP", 0, -14)
+		--self:SetPoint("BOTTOM", HelpMicroButton, "TOP", 0, -14)
+		self:SetSize(16, 16)
+		self:SetParent(SteakChatFrame)
+		--self:SetAlpha(0.7)
+		--self:SetPoint("BOTTOMRIGHT", SteakChatFrame, "BOTTOMRIGHT", -2, 2)
+		self:SetPoint("BOTTOMRIGHT", HelpMicroButton, "BOTTOMLEFT", -2, 0)
 	elseif IsAddOnLoaded("ElvUI") then
 		self:SetPoint("BOTTOMLEFT", ChatFrame1Tab, "TOPLEFT", 0, 5)
 	else
